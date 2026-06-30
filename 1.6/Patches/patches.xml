@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Surgery Patch -->
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ThingDef[defName="Human"]/recipes/li[text()="ExciseCarcinoma"]</xpath>
+		<value>
+			<li>CRSC_ChestDrain</li>
+		</value>
+	</Operation>
+</Patch>

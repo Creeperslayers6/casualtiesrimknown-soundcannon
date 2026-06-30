@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Basic Sound Cannon -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>CRSC_SoundCannon_Basic</defName>
+		<label>sound cannon</label>
+		<description>A sonic weapon capable of generating up to 190dB of sound. Covering one's ears will not protect foes nor friends alike.</description>
+		<thingClass>CasualtiesRimknown_SoundCannon.Building_TurretSonic</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawHighlight>true</drawHighlight>
+		<drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+		<graphicData>
+			<texPath>Things/Building/Security/TurretMini_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.27,0.25,0.27)</volume>
+				<offset>(0,0,0)</offset>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>CasualtiesRimknown_SoundCannon/TurretSoundCannon_MenuIcon</uiIconPath>
+		<uiIconScale>1.75</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<WorkToBuild>1500</WorkToBuild>
+			<Mass>10</Mass>
+			<Beauty>-10</Beauty>
+			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Shots until transducer replacement</fuelLabel>
+				<fuelGizmoLabel>Transducer durability</fuelGizmoLabel>
+				<outOfFuelMessage>Needs new transducer</outOfFuelMessage>
+				<fuelFilter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>1</fuelCapacity>
+				<fuelMultiplier>1</fuelMultiplier>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>false</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+			</li>
+			<li Class="CompProperties_Stunnable">
+				<affectedDamageDefs>
+					<li>EMP</li>
+					<li>Stun</li>
+				</affectedDamageDefs>
+			</li>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		<costList>
+			<Steel>85</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<building>
+			<combatPower>45</combatPower>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Cannon_SoundTurret</turretGunDef>
+			<turretBurstWarmupTime>5</turretBurstWarmupTime>
+			<turretBurstCooldownTime>3</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>CasualtiesRimknown_SoundCannon.PlaceWorker_ShowArcShockTurretRadius</li>
+		</placeWorkers>
+		<designationHotKey>Misc2</designationHotKey>
+		<researchPrerequisites>
+			<li>GunTurrets</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- Advanced Sound Cannon -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>CRSC_SoundCannon_Advanced</defName>
+		<label>advanced sound cannon</label>
+		<description>A sonic weapon capable of generating up to 190dB of sound. Covering one's ears will not protect foes nor friends alike.</description>
+		<thingClass>CasualtiesRimknown_SoundCannon.Building_TurretSonic</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawHighlight>true</drawHighlight>
+		<drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+		<graphicData>
+			<texPath>CasualtiesRimknown_SoundCannon/TurretSonic_Base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(0.27,0.25,0.27)</volume>
+				<offset>(0,0,0)</offset>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>CasualtiesRimknown_SoundCannon/TurretSoundCannon_Advanced_MenuIcon</uiIconPath>
+		<uiIconScale>1.75</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<WorkToBuild>5000</WorkToBuild>
+			<Mass>45</Mass>
+			<Beauty>-15</Beauty>
+			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Stunnable">
+				<affectedDamageDefs>
+					<li>EMP</li>
+					<li>Stun</li>
+				</affectedDamageDefs>
+			</li>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<costList>
+			<Steel>125</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<building>
+			<combatPower>45</combatPower>
+			<ai_combatDangerous>true</ai_combatDangerous>
+			<turretGunDef>Cannon_SoundTurret</turretGunDef>
+			<turretBurstWarmupTime>5</turretBurstWarmupTime>
+			<turretBurstCooldownTime>3</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>CasualtiesRimknown_SoundCannon.PlaceWorker_ShowArcShockTurretRadius</li>
+		</placeWorkers>
+		<designationHotKey>Misc2</designationHotKey>
+		<researchPrerequisites>
+			<li>HeavyTurrets</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<!-- Sonic Transducer Def-->
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>Cannon_SoundTurret</defName>
+		<label>sound-cannon transducer</label>
+		<description>An array of piezoelectric transducers made to be mounted on a turret.</description>
+		<graphicData>
+			<texPath>CasualtiesRimknown_SoundCannon/TurretSoundCannon_Top</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>1</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<RangedWeapon_Cooldown>8</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>CasualtiesRimknown_SoundCannon.Verb_ArcShock</verbClass>
+				<range>30</range>
+				<consumeFuelPerBurst>1</consumeFuelPerBurst>
+			</li>
+		</verbs>
+	</ThingDef>
+</Defs>

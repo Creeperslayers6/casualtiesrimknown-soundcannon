@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>CRSC_ChestDrain</defName>
+		<label>chest drain</label>
+		<description>Drains the pleural cavity and relieves pressure on the lungs, curing Hemothorax.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>draining TargetA's chest.</jobString>
+		<workAmount>750</workAmount>
+		<removesHediff>CRSC_Hemothorax</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully cured {1}'s hemothorax.</successfullyRemovedHediffMessage>
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<uiIconPath>UI/Icons/SurgicalInspection</uiIconPath>
+		<skillRequirements>
+			<Medicine>3</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+</Defs>

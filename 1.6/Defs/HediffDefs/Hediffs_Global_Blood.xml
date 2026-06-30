@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="InjuryBase">
+		<hediffClass>CasualtiesRimknown_SoundCannon.Hediff_InternalBleeding</hediffClass>
+		<defName>CRSC_InternalBleeding</defName>
+		<label>internal bleeding</label>
+		<description>Blood is spilling inside the body, putting pressure on the guts and lungs. Treatment Recommended</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>treated</labelTendedWell>
+				<labelTendedWellInner>treated</labelTendedWellInner>
+				<labelSolidTendedWell>treated</labelSolidTendedWell>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0165</painPerSeverity>
+			<bleedRate>0.15</bleedRate>
+			<canMerge>true</canMerge>
+		</injuryProps>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>CRSC_Hemothorax</defName>
+		<hediffClass>CasualtiesRimknown_SoundCannon.Hediff_Hemothorax</hediffClass>
+		<label>hemothorax</label>
+		<description>Blood is pooling inside the pleural cavity, interfering with breathing. Treatment Recommended.</description>
+		<defaultInstallPart>Torso</defaultInstallPart>
+		<initialSeverity>0.001</initialSeverity>
+		<lethalSeverity>1</lethalSeverity>
+		<stages>
+			<li>
+				<minSeverity>0.15</minSeverity>
+				<label>minor</label>
+				<painOffset>0.15</painOffset>
+				<vomitMtbDays>1.5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0.85</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>major</label>
+				<painOffset>0.5</painOffset>
+				<vomitMtbDays>1</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.75</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.85</painOffset>
+				<lifeThreatening>true</lifeThreatening>
+				<vomitMtbDays>0.3</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0.25</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.85</painOffset>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

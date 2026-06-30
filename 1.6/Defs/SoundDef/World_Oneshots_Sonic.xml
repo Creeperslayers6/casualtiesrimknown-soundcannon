@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Sonic Transducer Charging -->
+	<SoundDef>
+		<defName>CRSC_SoundCannon_Charging</defName>
+		<context>MapOnly</context>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>CasualtiesRimknown_SoundCannon/Sound_cannon_charge</clipPath>
+					</li>
+				</grains>
+				<volumeRange>45~45</volumeRange>
+				<pitchRange>0.9~1.084783</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!-- Sonic Transducer Firing -->
+	<SoundDef>
+		<defName>CRSC_SoundCannon_Blast</defName>
+		<context>MapOnly</context>
+		<sustainFadeoutTime>1</sustainFadeoutTime>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>CasualtiesRimknown_SoundCannon/Sound_cannon_blocked</clipPath>
+					</li>
+				</grains>
+				<volumeRange>55~55</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

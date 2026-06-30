@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Sonic Blast Wave DamageDef-->
+	<DamageDef>
+		<defName>CRSC_SonicShock</defName>
+		<label>sonic shock</label>
+		<!-- Basic -->
+		<workerClass>CasualtiesRimknown_SoundCannon.DamageWorker_SonicShockwave</workerClass>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<deathMessage>{0} had their organs perforated by barotrauma.</deathMessage>
+		<impactSoundType>Blunt</impactSoundType>
+		<!-- Damage -->
+		<hediff>CRSC_InternalBleeding</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Sharp</armorCategory>
+		<defaultDamage>100</defaultDamage>
+		<defaultArmorPenetration>1</defaultArmorPenetration>
+		<minDamageToFragment>15</minDamageToFragment>
+		<!-- Effect on Buildings -->
+		<buildingDamageFactor>0</buildingDamageFactor>
+		<buildingDamageFactorPassable>0</buildingDamageFactorPassable>
+		<buildingDamageFactorImpassable>0</buildingDamageFactorImpassable>
+		<!-- Effect on Plants / Corpses -->
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<plantDamageFactor>0.75</plantDamageFactor>
+		<corpseDamageFactor>0.25</corpseDamageFactor>
+		<!-- Stun Effect-->
+		<causeStun>true</causeStun>
+		<stunAdaptationTicks>300</stunAdaptationTicks>
+		<!-- Explosion -->
+		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+		<expolosionPropagationSpeed>1</expolosionPropagationSpeed>
+		<soundExplosion>CRSC_SoundCannon_Blast</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+	</DamageDef>
+</Defs>
