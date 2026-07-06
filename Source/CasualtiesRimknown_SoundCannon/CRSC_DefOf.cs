@@ -19,5 +19,8 @@ namespace CasualtiesRimknown_SoundCannon
 
         public static HediffDef CRSC_InternalBleeding;
         public static HediffDef CRSC_Hemothorax;
+
+        public static JobDef CRSC_VomitBlood;
+        public static TaleDef CRSC_VomitedBlood;
     }
 }
