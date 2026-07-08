@@ -52,7 +52,7 @@ namespace CasualtiesRimknown_SoundCannon
                 }
             };
             toil.defaultCompleteMode = ToilCompleteMode.Never;
-            toil.WithEffect(EffecterDefOf.Vomit, TargetIndex.A);
+            toil.WithEffect(CRSC_DefOf.CRSC_VomitBloodEffect, TargetIndex.A);
             toil.PlaySustainerOrSound(() => SoundDefOf.Vomit);
             yield return toil;
         }

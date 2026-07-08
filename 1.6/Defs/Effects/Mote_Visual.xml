@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="FoodBitBase">
+		<defName>CRSC_Mote_VomitBlood</defName>
+		<graphicData>
+			<texPath>CasualtiesRimknown_SoundCannon/VomitBlood</texPath>
+			<shaderType>Mote</shaderType>
+		</graphicData>
+	</ThingDef>
+</Defs>

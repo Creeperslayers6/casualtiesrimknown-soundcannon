@@ -10,10 +10,11 @@ using Verse.AI;
 namespace CasualtiesRimknown_SoundCannon
 {
     public class Hediff_InternalBleeding : Hediff_Injury
-    {
+    { 
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
+            base.destroysBodyParts = false;
             BodyPartRecord pawnTorso = pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso);
             if (pawnTorso != null && base.Part == pawnTorso && !pawn.health.hediffSet.HasHediff(CRSC_DefOf.CRSC_Hemothorax))
             {

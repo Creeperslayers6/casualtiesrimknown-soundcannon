@@ -10,6 +10,7 @@
 		<isExplosive>true</isExplosive>
 		<deathMessage>{0} had their organs perforated by barotrauma.</deathMessage>
 		<impactSoundType>Blunt</impactSoundType>
+		<makesBlood>false</makesBlood>
 		<!-- Damage -->
 		<hediff>CRSC_InternalBleeding</hediff>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>

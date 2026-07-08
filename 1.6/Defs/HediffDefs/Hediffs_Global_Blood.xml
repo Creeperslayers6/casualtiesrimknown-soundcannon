@@ -14,7 +14,7 @@
 		</comps>
 		<injuryProps>
 			<painPerSeverity>0.0165</painPerSeverity>
-			<bleedRate>0.15</bleedRate>
+			<bleedRate>0.1</bleedRate>
 			<canMerge>true</canMerge>
 		</injuryProps>
 	</HediffDef>
@@ -41,6 +41,18 @@
 				</capMods>
 			</li>
 			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>moderate</label>
+				<painOffset>0.25</painOffset>
+				<vomitMtbDays>1.25</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0.70</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
 				<minSeverity>0.5</minSeverity>
 				<label>major</label>
 				<painOffset>0.5</painOffset>
@@ -53,11 +65,24 @@
 				</capMods>
 			</li>
 			<li>
+				<minSeverity>0.60</minSeverity>
+				<label>severe</label>
+				<painOffset>0.70</painOffset>
+				<lifeThreatening>true</lifeThreatening>
+				<vomitMtbDays>0.3</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<setMax>0.35</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
 				<minSeverity>0.75</minSeverity>
 				<label>extreme</label>
 				<painOffset>0.85</painOffset>
 				<lifeThreatening>true</lifeThreatening>
-				<vomitMtbDays>0.3</vomitMtbDays>
+				<vomitMtbDays>0.2</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Breathing</capacity>

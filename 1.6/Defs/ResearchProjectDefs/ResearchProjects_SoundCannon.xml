@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- BASIC SOUND CANNON RESEARCH -->
+	<ResearchProjectDef>
+		<defName>CRSC_SonicTransducer</defName>
+		<label>sonic transducer</label>
+		<description>Produce a light turret which uses sonic to damage anyone in its path.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>BlowbackOperation</li>
+		</prerequisites>
+		<researchViewX>8.00</researchViewX>
+		<researchViewY>3.40</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->sonic transducers</li>
+
+				<li>subject_story->went deaf after getting glanced by the shockwave</li>
+				<li>subject_story->teleported excess sound cannons to the "Grey Planet"</li>
+
+				<li>subject_gerund->producing sonic transducers</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+	
+	<!-- ADVANCED SOUND CANNON RESEARCH -->
+	<ResearchProjectDef>
+		<defName>CRSC_AdvancedSonicTransducer</defName>
+		<label>advanced sonic transducer</label>
+		<description>Improves the basic Sound Cannon to be reusable and more sturdier.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>MicroelectronicsBasics</li>
+		</prerequisites>
+		<researchViewX>11.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->advanced sonic transducers</li>
+
+				<li>subject_story->tinkering with abandoned technology</li>
+				<li>subject_story->tried unsuccessfully to save the research project</li>
+
+				<li>subject_gerund->improving sonic transducers</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+</Defs>

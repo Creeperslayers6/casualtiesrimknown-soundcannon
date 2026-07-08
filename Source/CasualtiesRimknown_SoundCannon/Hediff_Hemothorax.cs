@@ -13,7 +13,7 @@ namespace CasualtiesRimknown_SoundCannon
     {
         private bool recordedTale;
         private bool visible;
-        float severityIncreaseFactor = 0.05f;
+        float severityIncreaseFactor = 0.1f;
         public override void TickInterval(int delta)
         {
             ageTicks += delta;
@@ -80,13 +80,17 @@ namespace CasualtiesRimknown_SoundCannon
             {
                 DoMTBDeath();
             }
+
+            // Increase Severity based on presence of Torso Internal Bleeding!
+
             if (pawn.IsHashIntervalTick(60, delta))
             {
                 BodyPartRecord pawnTorso = pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso);
                 Hediff torsoInternalBleeding = GetFirstHediffFromPart(CRSC_DefOf.CRSC_InternalBleeding, pawnTorso);
                 if (torsoInternalBleeding != null)
                 {
-                    Severity += (torsoInternalBleeding.Severity/100) * severityIncreaseFactor;
+                    //Severity += torsoInternalBleeding.IsTended() ? 0 : (torsoInternalBleeding.Severity/100) * severityIncreaseFactor;
+                    Severity += torsoInternalBleeding.IsTended() ? 0 : (torsoInternalBleeding.BleedRate/100) * severityIncreaseFactor;
                 }
             }
         }
