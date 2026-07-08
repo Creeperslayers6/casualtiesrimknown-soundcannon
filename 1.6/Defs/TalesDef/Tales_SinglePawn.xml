@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TaleDef>
+		<defName>CRSC_VomitedBlood</defName>
+		<label>vomited blood</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>0.2</baseInterest>
+		<ignoreChance>0.5</ignoreChance>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef]'s vomiting blood</li>
+				<li>image->[PAWN_nameFull] spewing blood onto the ground [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] looking disgusted while covered with dried blood [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] doubled over and retching onto the floor [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] on [PAWN_possessive] knees, vomiting blood on the floor [circumstance_group]</li>
+				<li>circumstance_phrase->while looking pained</li>
+				<li>circumstance_phrase->with great shame</li>
+				<li>circumstance_phrase->as others look on</li>
+				<li>desc_sentence->[PAWN_pronoun] seems totally unaware of what is around [PAWN_objective].</li>
+				<li>desc_sentence->[PAWN_possessive] face itself seems to be swelling.</li>
+				<li>desc_sentence->[PAWN_pronoun] is nearly unconscious, [PAWN_possessive] tongue lolling out, blood dripping.</li>
+				<li>desc_sentence->[PAWN_pronoun] is convulsing violently.</li>
+				<li>desc_sentence->[PAWN_pronoun] looks ashamed.</li>
+				<li>desc_sentence->[PAWN_pronoun] seems to be trying to laugh, despite the circumstances.</li>
+				<li>desc_sentence->[PAWN_pronoun] looks almost deflated, as though totally emptied by the intense vomiting.</li>
+				<li>desc_sentence->[PAWN_pronoun] is surrounded by an artistically rendered halo of blood.</li>
+				<li>desc_sentence->A [Animal] is eating from the trail of blood in the background.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+</Defs>

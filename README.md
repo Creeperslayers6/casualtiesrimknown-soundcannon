@@ -9,11 +9,10 @@ Rimworld mod that recreates the Sound Cannon from "Casualties: Unknown" inside R
 - Hemothorax - Triggered by Internal Bleeding in the Torso. Reduces breathing capacity as severity increases.
 ### Surgeries
 - Chest Drain - Used to remove/reset the hemothorax Hediff. Requires 1 Medicine and 3 Medical Skill to perform.
+### Research Projects
+- Sonic transducer : BlowbackOperation (Unlocks Basic Sound Cannon)
+- Advanced sonic transducer : MicroelectronicsBasics (Unlocks Advanced Sound Cannon)
 
 ## Intended Features/Changes
-- Hemothorax: Triggers vomiting blood instead of vomit.
-- Internal Bleeding: Bleeding doesn't result in trailing blood.
 - Internal Bleeding: Adjust infliction code so Internal Bleeding can't be inflicted on parts that can't bleed. (Ex: Insect's Shells)
-- Sonic Shockwave: Prevent shockwave from maiming targets or killing them outright.
-- Research: Custom Research Focuses for the Basic and Advanced Sound Cannons.
 - ? Sound Cannon (Basic): Rare chance for an enemy Sound Cannon (Basic) to be deployed randomly on the map from a transport pod?
