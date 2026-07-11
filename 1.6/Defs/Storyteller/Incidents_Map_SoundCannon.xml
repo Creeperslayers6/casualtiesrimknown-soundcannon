@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>CRSC_SoundCannonDrop</defName>
+		<label>sound cannon drop</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass></workerClass>
+		<category></category>
+		<baseChance>3</baseChance>
+	</IncidentDef>
+</Defs>

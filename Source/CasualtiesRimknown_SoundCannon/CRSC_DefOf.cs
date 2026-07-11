@@ -14,6 +14,7 @@ namespace CasualtiesRimknown_SoundCannon
     {
         public static SoundDef CRSC_SoundCannon_Charging;
         public static SoundDef CRSC_SoundCannon_Blast;
+        public static SoundDef CRSC_SoundCannon_BlastLoud;
 
         public static DamageDef CRSC_SonicShock;
 
@@ -25,5 +26,7 @@ namespace CasualtiesRimknown_SoundCannon
         public static EffecterDef CRSC_VomitBloodEffect;
 
         public static TaleDef CRSC_VomitedBlood;
+
+        public static IncidentDef CRSC_SoundCannonDrop;
     }
 }

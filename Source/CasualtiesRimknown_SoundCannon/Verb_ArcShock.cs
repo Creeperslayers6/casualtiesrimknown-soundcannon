@@ -35,6 +35,15 @@ namespace CasualtiesRimknown_SoundCannon
             ThingDef weapon = base.EquipmentSource.def;
             FloatRange? affectedAngle = value;
 
+            if (CasualtiesRimknownSoundCannon_Mod.settings.useLoudFireSFX)
+            {
+                shock.soundExplosion = CRSC_DefOf.CRSC_SoundCannon_BlastLoud;
+            }
+            else
+            {
+                shock.soundExplosion = CRSC_DefOf.CRSC_SoundCannon_Blast;
+            }
+
             GenExplosion.DoExplosion(center, mapHeld, effectiveRange, shock, instigator, shock.defaultDamage, shock.defaultArmorPenetration, shock.soundExplosion, weapon, null, currentTarget.Thing, null, 0f, 1, null, null, 255, applyDamageToExplosionCellsNeighbors: false, null, 0f, 1, 0f, damageFalloff: true, null, null, affectedAngle, doVisualEffects: true, shock.expolosionPropagationSpeed, 0f, doSoundEffects: true, null, 2f);
             return true;
         }

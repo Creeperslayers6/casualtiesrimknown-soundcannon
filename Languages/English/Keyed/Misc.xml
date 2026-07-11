@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!--Casualties: Rimknown Mod-->
+	<CasualtiesRimknown_SoundCannon>Casualties: Rimknown - Sound Cannon</CasualtiesRimknown_SoundCannon>
+	
+	<!--Casualties: Rimknown Mod Settings-->
+	<CRSC_Setting_UseFireLoud>Enable Loud Hit Effect</CRSC_Setting_UseFireLoud>
+	<CRSC_Setting_UserFireLoud_TT>Default: false, Caution: LOUD!</CRSC_Setting_UserFireLoud_TT>
+
+	<CRSC_Setting_EnableShockwaveLimbDamage>Enable Sonic Shockwave Destroying Limbs</CRSC_Setting_EnableShockwaveLimbDamage>
+	<CRSC_Setting_EnableShockwaveLimbDamage_TT>Default: false</CRSC_Setting_EnableShockwaveLimbDamage_TT>
+
+	<CRSC_SettingLabel_Audio>Audio</CRSC_SettingLabel_Audio>
+	
+	<CRSC_Setting_ShockwaveNormalVolume>Shockwave Normal Audio Volume Coefficent ({0})</CRSC_Setting_ShockwaveNormalVolume>
+	<CRSC_Setting_ShockwaveNormalVolume_TT>Default: 1f</CRSC_Setting_ShockwaveNormalVolume_TT>
+
+	<CRSC_Setting_ShockwaveLoudVolume>Shockwave Loud Audio Volume Coefficent ({0})</CRSC_Setting_ShockwaveLoudVolume>
+	<CRSC_Setting_ShockwaveLoudVolume_TT>Default: 1f</CRSC_Setting_ShockwaveLoudVolume_TT>
+</LanguageData>
