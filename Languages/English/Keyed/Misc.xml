@@ -4,6 +4,8 @@
 	<CasualtiesRimknown_SoundCannon>Casualties: Rimknown - Sound Cannon</CasualtiesRimknown_SoundCannon>
 	
 	<!--Casualties: Rimknown Mod Settings-->
+	<CRSC_SettingLabel_SoundCannon>Sound Cannon</CRSC_SettingLabel_SoundCannon>
+	
 	<CRSC_Setting_UseFireLoud>Enable Loud Hit Effect</CRSC_Setting_UseFireLoud>
 	<CRSC_Setting_UserFireLoud_TT>Default: false, Caution: LOUD!</CRSC_Setting_UserFireLoud_TT>
 
@@ -13,8 +15,18 @@
 	<CRSC_SettingLabel_Audio>Audio</CRSC_SettingLabel_Audio>
 	
 	<CRSC_Setting_ShockwaveNormalVolume>Shockwave Normal Audio Volume Coefficent ({0})</CRSC_Setting_ShockwaveNormalVolume>
-	<CRSC_Setting_ShockwaveNormalVolume_TT>Default: 1f</CRSC_Setting_ShockwaveNormalVolume_TT>
+	<CRSC_Setting_ShockwaveNormalVolume_TT>Default: 1.00f</CRSC_Setting_ShockwaveNormalVolume_TT>
 
 	<CRSC_Setting_ShockwaveLoudVolume>Shockwave Loud Audio Volume Coefficent ({0})</CRSC_Setting_ShockwaveLoudVolume>
-	<CRSC_Setting_ShockwaveLoudVolume_TT>Default: 1f</CRSC_Setting_ShockwaveLoudVolume_TT>
+	<CRSC_Setting_ShockwaveLoudVolume_TT>Default: 1.00f</CRSC_Setting_ShockwaveLoudVolume_TT>
+	
+	<CRSC_SettingLabel_Storyteller>Storyteller</CRSC_SettingLabel_Storyteller>
+	<CRSC_Setting_StorytellerSoundCannonDrop>Enable Random Event which Lands Mechanoid-owned Sound Cannons on the Map</CRSC_Setting_StorytellerSoundCannonDrop>
+	<CRSC_Setting_StorytellerSoundCannonDrop_TT>Default: true</CRSC_Setting_StorytellerSoundCannonDrop_TT>
+	
+	<CRSC_Setting_IncidentDef_SoundCannonDropMessage>Enable Warning Message for the Random Sound Cannon Drop Event</CRSC_Setting_IncidentDef_SoundCannonDropMessage>
+	<CRSC_Setting_IncidentDef_SoundCannonDropMessage_TT>Default: false</CRSC_Setting_IncidentDef_SoundCannonDropMessage_TT>
+	
+	<!-- Incident Defs -->
+	<CRSC_SoundCannonDrop_IncidDefMessage>Warning! A Sound Cannon Drop has been detected!</CRSC_SoundCannonDrop_IncidDefMessage>
 </LanguageData>

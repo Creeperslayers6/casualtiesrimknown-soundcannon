@@ -28,5 +28,8 @@ namespace CasualtiesRimknown_SoundCannon
         public static TaleDef CRSC_VomitedBlood;
 
         public static IncidentDef CRSC_SoundCannonDrop;
+
+        public static ThingDef CRSC_SoundCannon_Basic;
+        public static ThingDef CRSC_SoundCannonIncoming;
     }
 }

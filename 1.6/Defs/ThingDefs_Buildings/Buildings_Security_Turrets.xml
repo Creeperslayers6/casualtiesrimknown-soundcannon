@@ -202,4 +202,13 @@
 			</li>
 		</verbs>
 	</ThingDef>
+
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>CRSC_SoundCannonIncoming</defName>
+		<label>sound cannon (incoming)</label>
+		<size>(2, 2)</size>
+		<skyfaller>
+			<shadowSize>(2.5, 2.5)</shadowSize>
+		</skyfaller>
+	</ThingDef>
 </Defs>

@@ -5,9 +5,11 @@
 		<label>sound cannon drop</label>
 		<targetTags>
 			<li>Map_PlayerHome</li>
+			<li>Map_Misc</li>
 		</targetTags>
-		<workerClass></workerClass>
-		<category></category>
-		<baseChance>3</baseChance>
+		<workerClass>CasualtiesRimknown_SoundCannon.IncidentWorker_SoundCannonDrop</workerClass>
+		<category>ThreatSmall</category>
+		<baseChance>0.25</baseChance>
+		<minRefireDays>30</minRefireDays>
 	</IncidentDef>
 </Defs>
