@@ -31,5 +31,10 @@ namespace CasualtiesRimknown_SoundCannon
 
         public static ThingDef CRSC_SoundCannon_Basic;
         public static ThingDef CRSC_SoundCannonIncoming;
+
+        static CRSC_DefOf()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(CRSC_DefOf));
+        }
     }
 }

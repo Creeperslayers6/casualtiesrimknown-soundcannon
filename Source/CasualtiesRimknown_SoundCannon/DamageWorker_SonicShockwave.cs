@@ -25,6 +25,6 @@ namespace CasualtiesRimknown_SoundCannon
                     Find.CameraDriver.shaker.DoShake(4f * explosion.radius * explosion.screenShakeFactor / magnitude);
                 }
             }
-        } 
+        }
     }
 }

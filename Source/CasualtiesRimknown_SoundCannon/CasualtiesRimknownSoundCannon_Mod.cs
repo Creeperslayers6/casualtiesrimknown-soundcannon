@@ -12,9 +12,15 @@ namespace CasualtiesRimknown_SoundCannon
     {
         public static Mod_Settings settings;
 
+        private static bool isVanillaExpandedActive;
+
+        public static bool IsVanillaExpandedActive => isVanillaExpandedActive;
+
         public CasualtiesRimknownSoundCannon_Mod(ModContentPack content) : base(content)
         {
             settings = GetSettings<Mod_Settings>();
+            //
+            isVanillaExpandedActive = ModLister.AnyModActiveNoSuffix(["OskarPotocki.VanillaFactionsExpanded.Core"]);
         }
 
         public override string SettingsCategory()
@@ -26,19 +32,21 @@ namespace CasualtiesRimknown_SoundCannon
         {
             Listing_Standard ListA = new Listing_Standard();
             ListA.Begin(inRect);
+            //
             ListA.Label("CRSC_SettingLabel_SoundCannon".Translate());
             ListA.CheckboxLabeled("CRSC_Setting_UseFireLoud".Translate(), ref settings.useLoudFireSFX, "CRSC_Setting_UserFireLoud_TT".Translate());
             ListA.CheckboxLabeled("CRSC_Setting_EnableShockwaveLimbDamage".Translate(), ref settings.shockwaveDestroysLimbs, "CRSC_Setting_EnableShockwaveLimbDamage_TT".Translate());
-            
+            //
             ListA.GapLine();
             ListA.Label("CRSC_SettingLabel_Audio".Translate());
             settings.shockwaveNormalVolumeCoef = ListA.SliderLabeled("CRSC_Setting_ShockwaveNormalVolume".Translate(settings.shockwaveNormalVolumeCoef.ToString("F2")), settings.shockwaveNormalVolumeCoef, 0f, 5f, 0.5f, "CRSC_Setting_ShockwaveNormalVolume_TT".Translate());
             settings.shockwaveLoudVolumeCoef = ListA.SliderLabeled("CRSC_Setting_ShockwaveLoudVolume".Translate(settings.shockwaveLoudVolumeCoef.ToString("F2")), settings.shockwaveLoudVolumeCoef, 0f, 5f, 0.5f, "CRSC_Setting_ShockwaveLoudVolume_TT".Translate());
-
+            //
             ListA.GapLine();
             ListA.Label("CRSC_SettingLabel_Storyteller".Translate());
             ListA.CheckboxLabeled("CRSC_Setting_StorytellerSoundCannonDrop".Translate(), ref settings.storytellerSoundCannonDrop, "CRSC_Setting_StorytellerSoundCannonDrop_TT".Translate());
             ListA.CheckboxLabeled("CRSC_Setting_IncidentDef_SoundCannonDropMessage".Translate(), ref settings.incidentDefSoundCannonDropMessage, "CRSC_Setting_IncidentDef_SoundCannonDropMessage_TT".Translate());
+            //    
             ListA.End();
             //
             base.DoSettingsWindowContents(inRect);

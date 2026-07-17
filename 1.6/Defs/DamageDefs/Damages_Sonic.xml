@@ -15,7 +15,7 @@
 		<hediff>CRSC_InternalBleeding</hediff>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<armorCategory>Sharp</armorCategory>
-		<defaultDamage>100</defaultDamage>
+		<defaultDamage>75</defaultDamage>
 		<defaultArmorPenetration>1</defaultArmorPenetration>
 		<minDamageToFragment>15</minDamageToFragment>
 		<!-- Effect on Buildings -->
@@ -28,7 +28,7 @@
 		<corpseDamageFactor>0.25</corpseDamageFactor>
 		<!-- Stun Effect-->
 		<causeStun>true</causeStun>
-		<stunAdaptationTicks>300</stunAdaptationTicks>
+		<stunAdaptationTicks>600</stunAdaptationTicks>
 		<!-- Explosion -->
 		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>

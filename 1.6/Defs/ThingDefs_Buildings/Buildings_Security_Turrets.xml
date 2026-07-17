@@ -163,7 +163,7 @@
 			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Cannon_SoundTurret</turretGunDef>
 			<turretBurstWarmupTime>5</turretBurstWarmupTime>
-			<turretBurstCooldownTime>3</turretBurstCooldownTime>
+			<turretBurstCooldownTime>5</turretBurstCooldownTime>
 		</building>
 		<placeWorkers>
 			<li>PlaceWorker_TurretTop</li>
@@ -203,6 +203,7 @@
 		</verbs>
 	</ThingDef>
 
+	<!-- Sound Cannon Drop ThingDef -->
 	<ThingDef ParentName="SkyfallerBase">
 		<defName>CRSC_SoundCannonIncoming</defName>
 		<label>sound cannon (incoming)</label>

@@ -11,6 +11,7 @@ namespace CasualtiesRimknown_SoundCannon
 {
     public class Verb_ArcShock : Verb
     {
+        float firingAngle = 70f;
         protected override bool TryCastShot()
         {
             if (currentTarget.HasThing && currentTarget.Thing.Map != caster.Map)
@@ -26,7 +27,7 @@ namespace CasualtiesRimknown_SoundCannon
 
             IntVec3 position = caster.Position;
             float targetAngle = Mathf.Atan2(-(currentTarget.Cell.z - position.z), currentTarget.Cell.x - position.x) * 57.29578f;
-            FloatRange value = new FloatRange(targetAngle - 35f, targetAngle + 35f);
+            FloatRange value = new FloatRange(targetAngle - (firingAngle)/2, targetAngle + (firingAngle)/2);
             IntVec3 center = position;
             Map mapHeld = caster.MapHeld;
             float effectiveRange = EffectiveRange;
@@ -38,10 +39,12 @@ namespace CasualtiesRimknown_SoundCannon
             if (CasualtiesRimknownSoundCannon_Mod.settings.useLoudFireSFX)
             {
                 shock.soundExplosion = CRSC_DefOf.CRSC_SoundCannon_BlastLoud;
+                shock.soundExplosion.subSounds[0].volumeRange = new FloatRange(55f * CasualtiesRimknownSoundCannon_Mod.settings.shockwaveLoudVolumeCoef);
             }
             else
             {
                 shock.soundExplosion = CRSC_DefOf.CRSC_SoundCannon_Blast;
+                shock.soundExplosion.subSounds[0].volumeRange = new FloatRange(55f * CasualtiesRimknownSoundCannon_Mod.settings.shockwaveNormalVolumeCoef);
             }
 
             GenExplosion.DoExplosion(center, mapHeld, effectiveRange, shock, instigator, shock.defaultDamage, shock.defaultArmorPenetration, shock.soundExplosion, weapon, null, currentTarget.Thing, null, 0f, 1, null, null, 255, applyDamageToExplosionCellsNeighbors: false, null, 0f, 1, 0f, damageFalloff: true, null, null, affectedAngle, doVisualEffects: true, shock.expolosionPropagationSpeed, 0f, doSoundEffects: true, null, 2f);
