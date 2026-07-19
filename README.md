@@ -13,6 +13,11 @@ Rimworld mod that recreates the Sound Cannon from "Casualties: Unknown" inside R
 - Sonic transducer : BlowbackOperation (Unlocks Basic Sound Cannon)
 - Advanced sonic transducer : MicroelectronicsBasics (Unlocks Advanced Sound Cannon)
 
+## Mod Compatibility:
+### Vanilla Expanded Framework
+- Support for VEF's customBloodThingDef (VEF.Genes.GeneExtension)
+- Tested with: Erin's Experiments & Gexies expies
+
 ## Intended Features/Changes
 - Internal Bleeding: Adjust infliction code so Internal Bleeding can't be inflicted on parts that can't bleed. (Ex: Insect's Shells)
-- ? Sound Cannon (Basic): Rare chance for an enemy Sound Cannon (Basic) to be deployed randomly on the map from a transport pod?
+- Stun Effect: Replace the long stagger effect with a stun effect.
