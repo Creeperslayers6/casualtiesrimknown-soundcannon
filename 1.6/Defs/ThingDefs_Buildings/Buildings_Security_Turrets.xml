@@ -31,7 +31,7 @@
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			<WorkToBuild>1500</WorkToBuild>
+			<WorkToBuild>2700</WorkToBuild>
 			<Mass>10</Mass>
 			<Beauty>-10</Beauty>
 			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
@@ -73,7 +73,7 @@
 		<stuffCategories>
 			<li>Metallic</li>
 		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
+		<costStuffCount>50</costStuffCount>
 		<costList>
 			<Steel>85</Steel>
 			<ComponentIndustrial>5</ComponentIndustrial>
@@ -125,7 +125,7 @@
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			<WorkToBuild>5000</WorkToBuild>
+			<WorkToBuild>9000</WorkToBuild>
 			<Mass>45</Mass>
 			<Beauty>-15</Beauty>
 			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
@@ -151,8 +151,8 @@
 		<fillPercent>0.4</fillPercent>
 		<hasTooltip>true</hasTooltip>
 		<costList>
-			<Steel>125</Steel>
-			<Plasteel>20</Plasteel>
+			<Steel>150</Steel>
+			<Plasteel>30</Plasteel>
 			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
