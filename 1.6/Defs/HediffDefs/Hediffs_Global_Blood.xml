@@ -14,7 +14,7 @@
 		</comps>
 		<injuryProps>
 			<painPerSeverity>0.0165</painPerSeverity>
-			<bleedRate>0.1</bleedRate>
+			<bleedRate>0.075</bleedRate>
 			<canMerge>true</canMerge>
 		</injuryProps>
 	</HediffDef>

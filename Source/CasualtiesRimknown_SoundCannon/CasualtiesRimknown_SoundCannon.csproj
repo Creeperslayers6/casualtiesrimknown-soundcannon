@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,14 +48,20 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VEF">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodDefHandler.cs" />
     <Compile Include="Building_TurretSonic.cs" />
     <Compile Include="CasualtiesRimknownSoundCannon_Mod.cs" />
     <Compile Include="CRSC_DefOf.cs" />
     <Compile Include="DamageWorker_SonicShockwave.cs" />
     <Compile Include="Hediff_Hemothorax.cs" />
     <Compile Include="Hediff_InternalBleeding.cs" />
+    <Compile Include="IncidentWorker_SoundCannonDrop.cs" />
     <Compile Include="JobDriver_VomitBlood.cs" />
     <Compile Include="PlaceWorker_ShowArcShockTurretRadius.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

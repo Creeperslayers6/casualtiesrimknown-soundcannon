@@ -1,19 +1,30 @@
-﻿using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RimWorld;
 using Verse;
 using Verse.AI;
+using VEF;
+using UnityEngine;
 
 namespace CasualtiesRimknown_SoundCannon
 {
     public class JobDriver_VomitBlood : JobDriver_Vomit
     {
         private int ticksLeft;
+
+        public ThingDef filthBlood;
+        public EffecterDef effectVomitBlood = CRSC_DefOf.CRSC_VomitBloodEffect;
+
         protected override IEnumerable<Toil> MakeNewToils()
         {
+            filthBlood = BloodDefHandler.AcquireFilthBlood(pawn);
+            Color filthBloodColor = filthBlood.graphicData.color;
+
+            //Log.Message(filthBlood.defName + " : " + filthBloodColor);
+
             Toil toil = ToilMaker.MakeToil("MakeNewToils");
             toil.initAction = delegate
             {
@@ -38,7 +49,7 @@ namespace CasualtiesRimknown_SoundCannon
             {
                 if (pawn.IsHashIntervalTick(150, delta))
                 {
-                    FilthMaker.TryMakeFilth(job.targetA.Cell, base.Map, ThingDefOf.Filth_Blood, pawn.LabelIndefinite());
+                    FilthMaker.TryMakeFilth(job.targetA.Cell, base.Map, filthBlood, pawn.LabelIndefinite());
                     if (pawn.needs != null && pawn.needs.TryGetNeed(out Need_Food need) && need.CurLevelPercentage > 0.1f)
                     {
                         need.CurLevel -= need.MaxLevel * 0.04f;
@@ -52,7 +63,7 @@ namespace CasualtiesRimknown_SoundCannon
                 }
             };
             toil.defaultCompleteMode = ToilCompleteMode.Never;
-            toil.WithEffect(CRSC_DefOf.CRSC_VomitBloodEffect, TargetIndex.A);
+            toil.WithEffect(effectVomitBlood, TargetIndex.A, filthBloodColor);
             toil.PlaySustainerOrSound(() => SoundDefOf.Vomit);
             yield return toil;
         }

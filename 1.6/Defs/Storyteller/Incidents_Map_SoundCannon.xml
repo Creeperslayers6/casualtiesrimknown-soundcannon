@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>CRSC_SoundCannonDrop</defName>
+		<label>sound cannon drop</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+			<li>Map_Misc</li>
+		</targetTags>
+		<workerClass>CasualtiesRimknown_SoundCannon.IncidentWorker_SoundCannonDrop</workerClass>
+		<category>ThreatSmall</category>
+		<baseChance>0.25</baseChance>
+		<minRefireDays>30</minRefireDays>
+	</IncidentDef>
+</Defs>

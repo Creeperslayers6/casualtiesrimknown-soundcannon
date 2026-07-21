@@ -14,6 +14,7 @@ namespace CasualtiesRimknown_SoundCannon
         private bool recordedTale;
         private bool visible;
         float severityIncreaseFactor = 0.1f;
+        float severityDecreaseAmount = 0.025f;
         public override void TickInterval(int delta)
         {
             ageTicks += delta;
@@ -61,7 +62,9 @@ namespace CasualtiesRimknown_SoundCannon
             }
             if (curStage.vomitMtbDays > 0f && pawn.IsHashIntervalTick(600, delta) && Rand.MTBEventOccurs(curStage.vomitMtbDays, 60000f, 600f) && pawn.Spawned && pawn.Awake() && pawn.RaceProps.IsFlesh)
             {
+                // Vomit Blood and reduce Severity.
                 pawn.jobs.StartJob(JobMaker.MakeJob(CRSC_DefOf.CRSC_VomitBlood), JobCondition.InterruptForced, null, resumeCurJobAfterwards: true);
+                Severity -= severityDecreaseAmount;
             }
             if (curStage.forgetMemoryThoughtMtbDays > 0f && pawn.needs?.mood != null && pawn.IsHashIntervalTick(400, delta) && Rand.MTBEventOccurs(curStage.forgetMemoryThoughtMtbDays, 60000f, 400f) && pawn.needs.mood.thoughts.memories.Memories.TryRandomElement(out var result))
             {
@@ -89,8 +92,7 @@ namespace CasualtiesRimknown_SoundCannon
                 Hediff torsoInternalBleeding = GetFirstHediffFromPart(CRSC_DefOf.CRSC_InternalBleeding, pawnTorso);
                 if (torsoInternalBleeding != null)
                 {
-                    //Severity += torsoInternalBleeding.IsTended() ? 0 : (torsoInternalBleeding.Severity/100) * severityIncreaseFactor;
-                    Severity += torsoInternalBleeding.IsTended() ? 0 : (torsoInternalBleeding.BleedRate/100) * severityIncreaseFactor;
+                    Severity += torsoInternalBleeding.IsTended() ? 0 : (torsoInternalBleeding.BleedRate/100) * severityIncreaseFactor * pawn.RaceProps.bleedRateFactor;
                 }
             }
         }
