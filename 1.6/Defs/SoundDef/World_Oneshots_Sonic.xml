@@ -34,4 +34,22 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+
+	<!-- Sonic Transducer Firing - LOUD -->
+	<SoundDef>
+		<defName>CRSC_SoundCannon_BlastLoud</defName>
+		<context>MapOnly</context>
+		<sustainFadeoutTime>1</sustainFadeoutTime>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>CasualtiesRimknown_SoundCannon/Sound_cannon_hit</clipPath>
+					</li>
+				</grains>
+				<volumeRange>55~55</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
 </Defs>

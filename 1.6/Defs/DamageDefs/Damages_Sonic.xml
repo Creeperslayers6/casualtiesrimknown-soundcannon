@@ -15,7 +15,7 @@
 		<hediff>CRSC_InternalBleeding</hediff>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<armorCategory>Sharp</armorCategory>
-		<defaultDamage>100</defaultDamage>
+		<defaultDamage>75</defaultDamage>
 		<defaultArmorPenetration>1</defaultArmorPenetration>
 		<minDamageToFragment>15</minDamageToFragment>
 		<!-- Effect on Buildings -->
@@ -26,9 +26,10 @@
 		<makesAnimalsFlee>true</makesAnimalsFlee>
 		<plantDamageFactor>0.75</plantDamageFactor>
 		<corpseDamageFactor>0.25</corpseDamageFactor>
-		<!-- Stun Effect-->
-		<causeStun>true</causeStun>
-		<stunAdaptationTicks>300</stunAdaptationTicks>
+		<!-- Stun Effect (Couldn't Get Working Without A Transpiler :( )-->
+		<!--causeStun>true</causeStun-->
+		<!--stunAdaptationTicks>600</stunAdaptationTicks-->
+		<!--constantStunDurationTicks>300</constantStunDurationTicks-->
 		<!-- Explosion -->
 		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>

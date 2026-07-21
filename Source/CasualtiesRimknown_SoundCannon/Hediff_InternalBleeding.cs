@@ -14,7 +14,7 @@ namespace CasualtiesRimknown_SoundCannon
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
-            base.destroysBodyParts = false;
+            base.destroysBodyParts = CasualtiesRimknownSoundCannon_Mod.settings.shockwaveDestroysLimbs;
             BodyPartRecord pawnTorso = pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso);
             if (pawnTorso != null && base.Part == pawnTorso && !pawn.health.hediffSet.HasHediff(CRSC_DefOf.CRSC_Hemothorax))
             {
