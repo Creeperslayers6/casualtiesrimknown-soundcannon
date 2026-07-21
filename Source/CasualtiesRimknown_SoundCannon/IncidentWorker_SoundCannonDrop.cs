@@ -33,7 +33,7 @@ namespace CasualtiesRimknown_SoundCannon
             }
             if (TryFindSoundCannonDropCell(pos, map, 5, out var pos2))
             {
-                Thing newSoundCannon = ThingMaker.MakeThing(CRSC_DefOf.CRSC_SoundCannon_Basic, ThingDefOf.Uranium);
+                Thing newSoundCannon = ThingMaker.MakeThing(CRSC_DefOf.CRSC_SoundCannon_Basic, ThingDefOf.Steel);
                 if (newSoundCannon.def.CanHaveFaction)
                 {
                     newSoundCannon.SetFactionDirect(Faction.OfMechanoids);
