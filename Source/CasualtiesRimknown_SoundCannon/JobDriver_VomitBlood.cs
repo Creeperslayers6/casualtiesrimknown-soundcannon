@@ -22,9 +22,7 @@ namespace CasualtiesRimknown_SoundCannon
         {
             filthBlood = BloodDefHandler.AcquireFilthBlood(pawn);
             Color filthBloodColor = filthBlood.graphicData.color;
-
-            //Log.Message(filthBlood.defName + " : " + filthBloodColor);
-
+            //
             Toil toil = ToilMaker.MakeToil("MakeNewToils");
             toil.initAction = delegate
             {

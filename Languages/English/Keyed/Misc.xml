@@ -28,5 +28,5 @@
 	<CRSC_Setting_IncidentDef_SoundCannonDropMessage_TT>Default: false</CRSC_Setting_IncidentDef_SoundCannonDropMessage_TT>
 	
 	<!-- Incident Defs -->
-	<CRSC_SoundCannonDrop_IncidDefMessage>Warning! A Sound Cannon Drop has been detected!</CRSC_SoundCannonDrop_IncidDefMessage>
+	<CRSC_SoundCannonDrop_IncidDefMessage>Warning: A payload from {0} has been detected entering the map!</CRSC_SoundCannonDrop_IncidDefMessage>
 </LanguageData>

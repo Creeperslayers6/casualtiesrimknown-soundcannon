@@ -4,7 +4,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>CRSC_SoundCannon_Basic</defName>
 		<label>sound cannon</label>
-		<description>A sonic weapon capable of generating up to 190dB of sound. Covering one's ears will not protect foes nor friends alike.</description>
+		<description>An automatic sonic weapon capable of firing a 190dB blast. Covering one's ears will not protect foes nor friends alike. Due to its cheap construction, the transducer burns out immediately when firing.</description>
 		<thingClass>CasualtiesRimknown_SoundCannon.Building_TurretSonic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<drawHighlight>true</drawHighlight>
@@ -22,7 +22,7 @@
 			</shadowData>
 		</graphicData>
 		<uiIconPath>CasualtiesRimknown_SoundCannon/TurretSoundCannon_MenuIcon</uiIconPath>
-		<uiIconScale>1.75</uiIconScale>
+		<uiIconScale>0.90</uiIconScale>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<altitudeLayer>Building</altitudeLayer>
 		<thingCategories>
@@ -33,7 +33,7 @@
 			<Flammability>0.5</Flammability>
 			<WorkToBuild>2700</WorkToBuild>
 			<Mass>10</Mass>
-			<Beauty>-10</Beauty>
+			<Beauty>-20</Beauty>
 			<ShootingAccuracyTurret>1</ShootingAccuracyTurret>
 		</statBases>
 		<tickerType>Normal</tickerType>
@@ -82,7 +82,7 @@
 		<designationCategory>Security</designationCategory>
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
 		<building>
-			<combatPower>45</combatPower>
+			<combatPower>60</combatPower>
 			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Cannon_SoundTurret</turretGunDef>
 			<turretBurstWarmupTime>5</turretBurstWarmupTime>
@@ -102,7 +102,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>CRSC_SoundCannon_Advanced</defName>
 		<label>advanced sound cannon</label>
-		<description>A sonic weapon capable of generating up to 190dB of sound. Covering one's ears will not protect foes nor friends alike.</description>
+		<description>An automatic sonic weapon capable of firing a 190dB blast. Covering one's ears will not protect foes nor friends alike. Modified with improved components and an external power supply, this turret is capable of firing multiple times.</description>
 		<thingClass>CasualtiesRimknown_SoundCannon.Building_TurretSonic</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<drawHighlight>true</drawHighlight>
@@ -120,7 +120,7 @@
 			</shadowData>
 		</graphicData>
 		<uiIconPath>CasualtiesRimknown_SoundCannon/TurretSoundCannon_Advanced_MenuIcon</uiIconPath>
-		<uiIconScale>1.75</uiIconScale>
+		<uiIconScale>0.90</uiIconScale>
 		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
@@ -159,7 +159,7 @@
 		<designationCategory>Security</designationCategory>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 		<building>
-			<combatPower>45</combatPower>
+			<combatPower>60</combatPower>
 			<ai_combatDangerous>true</ai_combatDangerous>
 			<turretGunDef>Cannon_SoundTurret</turretGunDef>
 			<turretBurstWarmupTime>5</turretBurstWarmupTime>
@@ -179,7 +179,7 @@
 	<ThingDef ParentName="BaseWeaponTurret">
 		<defName>Cannon_SoundTurret</defName>
 		<label>sound-cannon transducer</label>
-		<description>An array of piezoelectric transducers made to be mounted on a turret.</description>
+		<description>An array of piezoelectric transducers powered by high-yield capacitors made to be mounted on a turret.</description>
 		<graphicData>
 			<texPath>CasualtiesRimknown_SoundCannon/TurretSoundCannon_Top</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -207,8 +207,14 @@
 	<ThingDef ParentName="SkyfallerBase">
 		<defName>CRSC_SoundCannonIncoming</defName>
 		<label>sound cannon (incoming)</label>
-		<size>(2, 2)</size>
+		<graphicData>
+			<texPath>Things/Special/DropPod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutFlying</shaderType>
+			<drawSize>1.9</drawSize>
+		</graphicData>
 		<skyfaller>
+			<shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
 			<shadowSize>(2.5, 2.5)</shadowSize>
 		</skyfaller>
 	</ThingDef>
