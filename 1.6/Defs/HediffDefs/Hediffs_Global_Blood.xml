@@ -4,7 +4,7 @@
 		<hediffClass>CasualtiesRimknown_SoundCannon.Hediff_InternalBleeding</hediffClass>
 		<defName>CRSC_InternalBleeding</defName>
 		<label>internal bleeding</label>
-		<description>Blood is spilling inside the body, putting pressure on the guts and lungs. Treatment Recommended</description>
+		<description>Blood is pooling underneath the skin, distorting its color and applying pressure on internal organs. Treatment Recommended.</description>
 		<comps>
 			<li Class="HediffCompProperties_TendDuration">
 				<labelTendedWell>treated</labelTendedWell>
@@ -23,7 +23,8 @@
 		<defName>CRSC_Hemothorax</defName>
 		<hediffClass>CasualtiesRimknown_SoundCannon.Hediff_Hemothorax</hediffClass>
 		<label>hemothorax</label>
-		<description>Blood is pooling inside the pleural cavity, interfering with breathing. Treatment Recommended.</description>
+		<defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+		<description>Blood is pooling inside the pleural cavity which is applying pressure on the lungs, interfering with breathing. Treatment is recommended.</description>
 		<defaultInstallPart>Torso</defaultInstallPart>
 		<initialSeverity>0.001</initialSeverity>
 		<lethalSeverity>1</lethalSeverity>
