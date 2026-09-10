@@ -11,10 +11,11 @@ namespace CasualtiesRimknown_SoundCannon
 {
     public class Hediff_Hemothorax : Hediff
     {
-        private bool recordedTale;
+        private float vomitSeverityReduction = 0.025f;
+        //
         private bool visible;
-        float severityIncreaseFactor = 0.1f;
-        float severityDecreaseAmount = 0.025f;
+        private bool recordedTale;
+        // Overriding TickInterval to replace the JobDefOf.Vomit
         public override void TickInterval(int delta)
         {
             ageTicks += delta;
@@ -62,9 +63,10 @@ namespace CasualtiesRimknown_SoundCannon
             }
             if (curStage.vomitMtbDays > 0f && pawn.IsHashIntervalTick(600, delta) && Rand.MTBEventOccurs(curStage.vomitMtbDays, 60000f, 600f) && pawn.Spawned && pawn.Awake() && pawn.RaceProps.IsFlesh)
             {
-                // Vomit Blood and reduce Severity.
+                // Modified Code Starts Here
                 pawn.jobs.StartJob(JobMaker.MakeJob(CRSC_DefOf.CRSC_VomitBlood), JobCondition.InterruptForced, null, resumeCurJobAfterwards: true);
-                Severity -= severityDecreaseAmount;
+                Severity -= vomitSeverityReduction;
+                // Modified Code Ends Here!
             }
             if (curStage.forgetMemoryThoughtMtbDays > 0f && pawn.needs?.mood != null && pawn.IsHashIntervalTick(400, delta) && Rand.MTBEventOccurs(curStage.forgetMemoryThoughtMtbDays, 60000f, 400f) && pawn.needs.mood.thoughts.memories.Memories.TryRandomElement(out var result))
             {
@@ -82,18 +84,6 @@ namespace CasualtiesRimknown_SoundCannon
             if (curStage.deathMtbDays > 0f && pawn.IsHashIntervalTick(200, delta) && Rand.MTBEventOccurs(curStage.deathMtbDays, 60000f, 200f))
             {
                 DoMTBDeath();
-            }
-
-            // Increase Severity based on presence of Torso Internal Bleeding!
-
-            if (pawn.IsHashIntervalTick(60, delta))
-            {
-                BodyPartRecord pawnTorso = pawn.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso);
-                Hediff torsoInternalBleeding = GetFirstHediffFromPart(CRSC_DefOf.CRSC_InternalBleeding, pawnTorso);
-                if (torsoInternalBleeding != null)
-                {
-                    Severity += torsoInternalBleeding.IsTended() ? 0 : (torsoInternalBleeding.BleedRate/100) * severityIncreaseFactor * pawn.RaceProps.bleedRateFactor;
-                }
             }
         }
         private void TryDoRandomMentalBreak()
@@ -138,19 +128,6 @@ namespace CasualtiesRimknown_SoundCannon
                     pawn.health.AddHediff(hediff, brain);
                 }
             }
-        }
-
-        Hediff GetFirstHediffFromPart(HediffDef hediffDef, BodyPartRecord bodyPart, bool mustBeVisible = false)
-        {
-            List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
-            for (int i = 0; i < hediffs.Count; i++)
-            {
-                if (hediffs[i].def == hediffDef && hediffs[i].Part == bodyPart && (!mustBeVisible || hediffs[i].Visible))
-                {
-                    return hediffs[i];
-                }
-            }
-            return null;
         }
     }
 }

@@ -3,7 +3,7 @@
 	<!-- Sonic Blast Wave DamageDef-->
 	<DamageDef>
 		<defName>CRSC_SonicShock</defName>
-		<label>sonic shock</label>
+		<label>sonic shockwave</label>
 		<!-- Basic -->
 		<workerClass>CasualtiesRimknown_SoundCannon.DamageWorker_SonicShockwave</workerClass>
 		<externalViolence>true</externalViolence>
@@ -24,12 +24,8 @@
 		<buildingDamageFactorImpassable>0</buildingDamageFactorImpassable>
 		<!-- Effect on Plants / Corpses -->
 		<makesAnimalsFlee>true</makesAnimalsFlee>
-		<plantDamageFactor>0.75</plantDamageFactor>
-		<corpseDamageFactor>0.25</corpseDamageFactor>
-		<!-- Stun Effect (Couldn't Get Working Without A Transpiler :( )-->
-		<!--causeStun>true</causeStun-->
-		<!--stunAdaptationTicks>600</stunAdaptationTicks-->
-		<!--constantStunDurationTicks>300</constantStunDurationTicks-->
+		<plantDamageFactor>0.85</plantDamageFactor>
+		<corpseDamageFactor>0.50</corpseDamageFactor>
 		<!-- Explosion -->
 		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
 		<explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>

@@ -23,27 +23,24 @@ namespace CasualtiesRimknown_SoundCannon
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
-            if (!TryFindSoundCannonDropCell(map.Center, map, 999999, out var pos))
-            {
-                return false;
-            }
             if (Find.FactionManager.FirstFactionOfDef(FactionDefOf.Mechanoid) == null)
             {
                 return false;
             }
-            if (TryFindSoundCannonDropCell(pos, map, 5, out var pos2))
+            if (!TryFindSoundCannonDropCell(map.Center, map, 999999, out var pos))
             {
-                Thing newSoundCannon = ThingMaker.MakeThing(CRSC_DefOf.CRSC_SoundCannon_Basic, ThingDefOf.Steel);
-                if (newSoundCannon.def.CanHaveFaction)
-                {
-                    newSoundCannon.SetFactionDirect(Faction.OfMechanoids);
-                }
-                SkyfallerMaker.SpawnSkyfaller(CRSC_DefOf.CRSC_SoundCannonIncoming, newSoundCannon, pos, map);
-                
-                if (CasualtiesRimknownSoundCannon_Mod.settings.incidentDefSoundCannonDropMessage)
-                {
-                    Messages.Message("CRSC_SoundCannonDrop_IncidDefMessage".Translate(), new TargetInfo(pos, map), MessageTypeDefOf.NeutralEvent);
-                }
+                return false;
+            }
+            Thing newSoundCannon = ThingMaker.MakeThing(CRSC_DefOf.CRSC_SoundCannon_Basic, ThingDefOf.Steel);
+            if (newSoundCannon.def.CanHaveFaction)
+            {
+                newSoundCannon.SetFactionDirect(Faction.OfMechanoids);
+            }
+            SkyfallerMaker.SpawnSkyfaller(CRSC_DefOf.CRSC_SoundCannonIncoming, newSoundCannon, pos, map);
+
+            if (CasualtiesRimknownSoundCannon_Mod.settings.incidentDefSoundCannonDropMessage)
+            {
+                Messages.Message("CRSC_SoundCannonDrop_IncidDefMessage".Translate(Faction.OfMechanoids), new TargetInfo(pos, map), MessageTypeDefOf.NeutralEvent);
             }
             return true;
         }
